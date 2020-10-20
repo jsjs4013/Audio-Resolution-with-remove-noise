@@ -79,11 +79,11 @@ def train(args):
   assert n_chan == 1
 
   # create model
-#   model = get_model(args, n_dim, r, from_ckpt=False, train=True)
+  model = get_model(args, n_dim, r, from_ckpt=False, train=True)
 
   # load model
-  model = get_model(args, n_dim, r, from_ckpt=True, train=True)
-  model.load(args.logname) # from default checkpoint
+  # model = get_model(args, n_dim, r, from_ckpt=True, train=True)
+  # model.load(args.logname) # from default checkpoint
 
   # train model
   model.fit(X_train, Y_train, Z_train, X_val, Y_val, Z_val, n_epoch=args.epochs)
